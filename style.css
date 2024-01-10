@@ -84,9 +84,6 @@ li h3 {
     grid-template-rows: 1fr 2fr;
     gap: 5px;
 }
-.header > * {
-    border: 1px solid red;
-}
 
 .search-bar,
 .profile {
@@ -107,12 +104,33 @@ li h3 {
     border: 1px solid #111;
     background-color: rgb(196, 194, 194);
 }
+
 .img {
     height: 80%;
     width: 10%;
     background-color: #eee;
     border-radius: 50%;
     margin: 0 10px;
+}
+
+.header-info {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+}
+.header-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.btn {
+    border-radius: 20px;
+    padding: 8px 15px;
+    background-color: #84cc16;
+    font-weight: bold;
+    font-size: 1rem;
 }
 /* Main Content */
 .main-content {
