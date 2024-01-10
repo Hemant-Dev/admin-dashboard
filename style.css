@@ -7,8 +7,8 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 3fr 1fr;
-    /* height: 100vh; */
-    /* width: 100vw; */
+    height: 100vh;
+    width: 100vw;
 }
 .header {
     background-color: #14b8a6;
@@ -35,8 +35,8 @@
 .sidebar {
     display: flex;
     flex-flow: column;
-    gap: 50px;
-    flex-grow: 0;
+    gap: 40px;
+    /* flex-grow: 0; */
 }
 .sidebar .logo {
     padding: 10px;
@@ -51,14 +51,20 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 4px;
 }
-
+.sidebar .logo svg {
+    width: 40px;
+}
 .list-1 > *,
 .list-2 > * {
     height: 50px;
     /* border: 1px solid red; */
     display: flex;
     justify-content: start;
-    margin-left: 10px;
+    margin-left: 20px;
+}
+.list-1 li svg,
+.list-2 li svg {
+    width: 30px;
 }
 li h3 {
     align-self: center;
@@ -82,8 +88,32 @@ li h3 {
     border: 1px solid red;
 }
 
-
-
+.search-bar,
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Sets all the div with svg and header to a specif size to reduce the svg to blow up */
+.search-bar svg,
+.profile svg{
+    margin-right: 10px;
+    width: 22px;
+}
+.search-bar input {
+    height: 40%;
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid #111;
+    background-color: rgb(196, 194, 194);
+}
+.img {
+    height: 80%;
+    width: 10%;
+    background-color: #eee;
+    border-radius: 50%;
+    margin: 0 10px;
+}
 /* Main Content */
 .main-content {
     display: grid;
