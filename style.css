@@ -6,13 +6,13 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
     min-height: 100vh;
 }
 .header {
     background-color: #bdec4f;
-    grid-column: 2;
-    grid-row: 1;
+    grid-area: 1 / 2 / 2 / -1;
+    padding: 0.5rem 2rem;
 }
 
 .sidebar {
@@ -113,8 +113,8 @@ li h3 {
 }
 
 .img {
-    height: 80%;
-    width: 10%;
+    height: 2rem;
+    width: 2rem;
     background-color: #111;
     border-radius: 50%;
     margin: 0 10px;
@@ -124,14 +124,19 @@ li h3 {
     display: flex;
     gap: 2em;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+}
+.header-info .img {
+    height: 4rem;
+    width: 4rem;
 }
 .header-btn {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     gap: 1em;
 }
+
 .btn {
     border-radius: 20px;
     padding: 8px 15px;
@@ -146,18 +151,21 @@ li h3 {
 /* Main Content */
 .main-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(auto-fit, minmax (300px, 1fr));
+    grid-auto-rows: 1fr;
     padding: 10px;
+    gap: 2rem 1rem;
 }
-
 
 /* Project Section */
 .project-container {
     display: grid;
+    /* grid-template: 1fr / 1fr / 1fr  1fr; */
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-    
+    grid-column: 1;
 }
 
 /* Main Content Sidebar Sections */
@@ -166,7 +174,7 @@ li h3 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
-
+    grid-column: 2;
 }
 
 .project-card {
@@ -175,6 +183,7 @@ li h3 {
     width: 80%;
     border: 4px solid #0e8577;
     background-color: #99f6e4;
+    margin: 5px;
 }
 .project-card {
     border-bottom: 8px solid #84cc16;
@@ -197,7 +206,7 @@ li h3 {
 .announcements-section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto repeat(3, 1fr);
     justify-items: center;
 }
 
@@ -215,12 +224,13 @@ li h3 {
 .trending-section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto repeat(4, 1fr);
     justify-items: center;
 }
 
 .trending-section > * {
     border-bottom: 1px solid #84cc16;
+    /* padding: 5px; */
 }
 
 .trending-card svg {
